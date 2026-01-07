@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/snowy_7774348.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+</head>
+<body>
+    <div class="wrapper"> 
+         <h1 id="heading">Weather Report</h1>
+        <div class="container">
+            <div class="options">
+                <div class="p user">Your Weather</div>
+                <div class="p search">Search Weather</div>
+            </div>
+            <div class="grant_body">
+                <img src="./assets/location.png" width="80px" height="80px">
+                <h2>Grant Location Access</h2>
+                <p grant_text>Allow Access To Get Weather Information</p>
+                <button grant_btn>Grant Access</button>
+            </div>
+            <form class="search_form">
+                <input name="citysearching" search_input type="text" placeholder="Search for City...">
+                <button class="search_btn"> <!--type="submit" is used to send (submit) the form data to the server when the button is clicked.In short: It triggers form submission.-->
+                    <img src="./assets/search.png" alt="searching" width="25px" height="25px">
+                </button><!--Inside a <form>, if one or more <button> is there then type="submit" by default. can reload the page while clicking so fix:- type="button" or addeventlistener in form and e.preventdefault()-->
+            </form> 
+            <div class="error_box">
+                <img src="./assets/not-found.png" alt="error" width="80%" height="80%">
+            </div>
+            <div class="loader">
+                <img src="./assets/loading.gif" alt="loading..."  width="200px" height="200px">
+            </div>
+            <div class="data_body">
+                <div>
+                    <span city></span>
+                    <img src="" flag width="30px" height="30px"></span>
+                </div> <!--can also take custom attributes.-->
+                <div description></div>
+                <img src="" icon_show></img>
+                <h2 temperature></h2>
+                <div id="data">
+                    <div  class="data_box">
+                        <img src="./assets/wind.png" alt="wind" width="40px" height="50px">
+                        <p>WINDSPEED</p>
+                        <p wind_data></p>
+                    </div>
+                    <div class="data_box">
+                        <img src="./assets/humidity.png" alt="humidity" width="50px" height="50px">
+                        <p>HUMIDITY</p>
+                        <p humidity_data></p>
+                    </div><div class="data_box">
+                        <img src="./assets/cloud.png" alt="cloud" width="50px" height="50px">
+                        <p>CLOUDS</p>
+                        <p cloud_data></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
